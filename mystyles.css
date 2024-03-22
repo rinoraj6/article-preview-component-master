@@ -2,7 +2,7 @@
     --VeryDarkGrayishBlue: #48556a;
     --DesaturatedDarkBlue: #6d7f97;
     --GrayishBlue: hsl(212, 23%, 69%);
-    --LightGrayishBlue: hsl(210, 46%, 95%);
+    --LightGrayishBlue: #ecf2f8;
 }
 *{
     box-sizing: border-box;
@@ -99,6 +99,16 @@ body{
 }
 
 
+.icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 
 .share-icon{
 
@@ -107,16 +117,29 @@ body{
     cursor: pointer;
     
 }
-.ico {
-    padding: 1rem;
-    background-color: var(--LightGrayishBlue);
-    filter: hue-rotate(18deg);
+/* 
+.visible{
+    filter: brightness(0) saturate(100%) invert(31%) sepia(52%) saturate(242%) hue-rotate(177deg) brightness(91%) contrast(89%);
+} */
+.active{
+    filter: brightness(0) saturate(100%) invert(100%) sepia(24%) saturate(6512%) hue-rotate(179deg) brightness(112%) contrast(94%);    
 }
 
-.ico:hover{
-    background-color: #48556a;
-    fill: #6d7f97;
+.dark-bg {
+    background-color: var(--DesaturatedDarkBlue);
 }
+
+.light-bg{
+    background-color: var(--LightGrayishBlue);
+}
+
+
+
+.ico {
+    padding: 1rem;
+}
+
+
 
 
 .share-icon-mobile{
@@ -150,7 +173,7 @@ body{
 .share-box{
     overflow: visible !important;
     position: absolute;
-    bottom: 30%;
+    bottom: 34%;
     right: -10%;
     display: flex;
     justify-content: center;
@@ -165,13 +188,18 @@ body{
     
 }
 
+
+
+
+
 .triangle{
     border-left: 20px solid transparent;
     border-right: 20px solid transparent;
-    border-top: 20px solid hsl(217, 19%, 35%);
+    border-top: 20px solid var(--VeryDarkGrayishBlue);
     position: absolute;
-    bottom: 27%;
+    bottom: 30%;
     right: 5.5%;
+    
 }
 
 
@@ -247,16 +275,22 @@ body{
 
     }
 
-    .share{
+    
+    .icon{
         width: 30px;
-        height: 30px;   
+        height: 30px;
+        cursor: pointer;
+        padding: .6rem;
+        
     }
-    .share-icon{
+
+    
+    /* .share-icon{
         padding: 0;
     }
     .ico{
         padding: 0.6rem;
-    }
+    } */
 
     .triangle{
         display: none;
